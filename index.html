@@ -260,6 +260,18 @@
   </div>
 </div>
 
+<!-- 18+ -->
+
+<div id="ageModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="ageModalTitle" tabindex="-1">
+  <div class="modal-content">
+    <h2 id="ageModalTitle">Avez-vous plus de 18 ans&nbsp;?</h2>
+    <div class="age-buttons">
+      <button id="ageYes">Oui</button>
+      <button id="ageNo">Non</button>
+    </div>
+  </div>
+</div>
+
     
     <!-- Bannière de cookies -->
     <div id="cookie-banner" class="cookie-banner">
@@ -370,4 +382,29 @@ document.addEventListener('keydown', function(e) {
   }
 });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const ageModal = document.getElementById("ageModal");
+  const btnYes = document.getElementById("ageYes");
+  const btnNo = document.getElementById("ageNo");
+
+  // Показати модалку при завантаженні сторінки
+  ageModal.classList.add("active");
+
+  btnYes.addEventListener("click", () => {
+    // Користувач підтвердив, можна ховати модалку
+    ageModal.classList.remove("active");
+    // Тут можна додати логіку дозволу доступу
+  });
+
+  btnNo.addEventListener("click", () => {
+    // перенаправлення на інший сайт:
+    window.location.href = "https://www.google.com";
+  });
+});
+
+</script>
+
+
 </body></html>
