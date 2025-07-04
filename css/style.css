@@ -13,7 +13,7 @@ p {
   margin: 0;
 }
 a:hover {
-  color: #2fff00;
+  color: #235392;
 }
 a,
 ul,
@@ -46,11 +46,11 @@ li {
   font-weight: 600;
 }
 .nav-list > li {
-  border-bottom: solid 3px #000;
+  border-bottom: solid 3px #2653ac;
 }
 
 .hero {
-  background: linear-gradient(to bottom, #004d28, #2fff00);
+background: linear-gradient(to bottom, #000000, #0b2342);
   color: #eee;
   font-size: 40px;
 }
@@ -105,16 +105,16 @@ li {
   margin: 10px 0;
 }
 .button {
-  background-color: #2fff00;
+  background-color: #00bcff;
   padding: 10px 15px;
   border-radius: 10px;
   line-height: 1.8;
-  border: solid 2px #004d28;
+  border: solid 2px #0060af;
   text-transform: uppercase;
 }
 .button:hover {
-  background-color: #004d28;
-  color: #2fff00;
+  background-color: #3d62e9;
+  color: #ffffff;
 }
 
 .comment,
@@ -175,7 +175,7 @@ li {
   width: 100%;
 }
 .footer-content {
-  background-color: #004d28;
+  background-color: #062b72;
   color: #eee;
 }
 .footer-cooperation {
@@ -261,7 +261,7 @@ li {
   max-width: 900px;
   margin: 0 auto;
   
-  background-color: #004d28; /* Темно-синій фон */
+  background-color: #0e2c71; /* Темно-синій фон */
   color: #fff;
   padding: 20px 25px;
   border-radius: 8px;
@@ -304,7 +304,7 @@ li {
 }
 
 .btn-accept {
-  background-color: #2ecc71;
+  background-color: #0b6632;
 }
 
 .btn-accept:hover {
@@ -312,7 +312,7 @@ li {
 }
 
 .btn-reject {
-  background-color: #e74c3c;
+  background-color: #8c382f;
 }
 
 .btn-reject:hover {
