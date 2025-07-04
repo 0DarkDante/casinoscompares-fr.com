@@ -34,13 +34,14 @@
     <header class="header">
       <div class="container">
         <div class="logo">
-          <a href="https://casinosroyaux-fr.com/"><img src="images/logo.png" alt="Logo"></a>
+          <a href="./index.html"><img src="images/logo.png" alt="Logo"></a>
         </div>
         <nav class="nav" id="nav">
           <ul class="nav-list">
-            <li><a href="https://casinosroyaux-fr.com/">Accueil</a></li>
-            <li><a href="https://casinosroyaux-fr.com/#casino">Top Casinos</a></li>
-            <li><a href="https://casinosroyaux-fr.com/#guide">Guide</a></li>
+            <li><a href="./rapides.html">Paiements rapides</a></li>
+            <li><a href="./notes.html">Meilleures notes</a></li>
+            <li><a href="./verifiese.html">Sites vérifiés</a></li>
+            <li><a href="./responsable.html">Jeu responsable</a></li>
           </ul>
         </nav>
       </div>
@@ -217,28 +218,18 @@
               <nav>
                 <ul>
                   <li>
-                    <a href="https://casinosroyaux-fr.com/paiements-rapides.php">Paiements Rapides et Simples</a>
+                    <a href="">Contact</a>
                   </li>
                   <li>
-                    <a href="https://casinosroyaux-fr.com/les-mieux-notés.php">Les Mieux Notés par les Joueurs Français</a>
+                    <a href="./privacy_policy.html">Politique de confidentialité</a>
                   </li>
                   <li>
-                    <a href="https://casinosroyaux-fr.com/sites-vérifiés.php">Sites Vérifiés Uniquement</a>
+                    <a href="./conditions.html">Conditions d'utilisation</a>
                   </li>
                   <li>
-                    <a href="https://casinosroyaux-fr.com/nouveautés.php">Nouveautés – Juin 2025</a>
+                    <a href="./policy_cookies.html">Politique relative aux cookies</a>
                   </li>
-                  <li><a href="https://casinosroyaux-fr.com/contactez-nous.php">Contactez-nous</a></li>
-                  <li>
-                    <a href="https://casinosroyaux-fr.com/politique-de-confidentialité.php">Politique de confidentialité</a>
-                  </li>
-                  <li>
-                    <a href="https://casinosroyaux-fr.com/conditions-d’utilisation.php">Conditions d’utilisation</a>
-                  </li>
-                  <li>
-                    <a href="https://casinosroyaux-fr.com/politique-relative-aux-cookies.php">Politique relative aux cookies</a>
-                  </li>
-                  <li><a href="https://casinosroyaux-fr.com/jeu-responsable.php">Jeu responsable</a></li>
+                  <li><a href="./responsable.html">Jeu responsable</a></li>
                 </ul>
               </nav>
             </div>
@@ -250,6 +241,26 @@
         </div>
       </section>
     </footer>
+
+    <!-- modal -->
+<div id="contactModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="contactModalTitle" tabindex="-1">
+  <div class="modal-content" role="document">
+    <h2 id="contactModalTitle">Contactez-nous</h2>
+    <p>Pour toute question ou demande, veuillez remplir le formulaire ci-dessous. Nous vous répondrons dans les plus brefs délais.</p>
+    <form id="contactForm" novalidate>
+      <input type="text" name="name" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required />
+      <textarea name="message" placeholder="Votre message" required></textarea>
+
+      <div class="modal-buttons">
+        <button type="submit">Envoyer</button>
+        <button type="button" id="closeContactModal" class="close-modal" aria-label="Fermer la fenêtre de contact">Fermer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+    
     <!-- Bannière de cookies -->
     <div id="cookie-banner" class="cookie-banner">
       <div class="cookie-content">
@@ -317,5 +328,46 @@
       });
     </script>
   
+<script>
+// Відкриття модалки по кліку на посилання "Contact"
+const contactLink = document.querySelector('nav ul li a[href=""]');
+const contactModal = document.getElementById('contactModal');
+const closeBtn = document.getElementById('closeContactModal');
 
+function openModal() {
+  contactModal.classList.remove('closing');
+  contactModal.classList.add('active');
+  contactModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeModal() {
+  contactModal.classList.remove('active');
+  contactModal.classList.add('closing');
+  contactModal.setAttribute('aria-hidden', 'true');
+  setTimeout(() => {
+    contactModal.classList.remove('closing');
+  }, 300);
+}
+
+contactLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal();
+});
+
+closeBtn.addEventListener('click', closeModal);
+
+// Закриття при кліку поза модалкою
+contactModal.addEventListener('click', function(e) {
+  if(e.target === this) {
+    closeModal();
+  }
+});
+
+// Опціонально: Закриття модалки при натисканні Escape
+document.addEventListener('keydown', function(e) {
+  if(e.key === "Escape" && contactModal.classList.contains('active')) {
+    closeModal();
+  }
+});
+</script>
 </body></html>
